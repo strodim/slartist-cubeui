@@ -14,11 +14,11 @@ function App() {
 
   let device = 'big';
 
-  if (screenWidth < 1650) {
+  if (screenWidth < 900) {
     device = 'medium';
   }
 
-  if (screenWidth < 760) {
+  if (screenWidth < 600) {
     device = 'small';
   }
 

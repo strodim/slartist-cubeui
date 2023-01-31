@@ -1,5 +1,29 @@
+import { useContext } from "react";
+import DeviceContext from "../context/DeviceContext";
+
 function Layer({ children }) {
-    return <div className="layer">{children}</div>
+
+    const { device } = useContext(DeviceContext);
+    let borderRadius = undefined;
+
+    switch (device) {
+        case 'big':
+            borderRadius = '50px';
+            break;
+        case 'medium':
+            borderRadius = '40px';
+            break;
+        case 'small':
+            borderRadius = '30px';
+            break;
+    }
+
+    const style = {
+        borderRadius
+    }
+
+
+    return <div className="layer" style={style}>{children}</div>
 }
 
 export default Layer;

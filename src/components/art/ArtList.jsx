@@ -43,8 +43,8 @@ function ArtList() {
                 break;
             case 'small':
                 image = itm.attributes.Img.data.attributes.formats.small;
-                imgWidth = image.width / 1.5;
-                imgHeight = image.height / 1.5;
+                imgWidth = image.width / 2;
+                imgHeight = image.height / 2;
                 break;
         }
 
