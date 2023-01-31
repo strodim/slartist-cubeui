@@ -4,22 +4,22 @@ import DeviceContext from "../../context/DeviceContext";
 function Cover() {
 
     const { device } = useContext(DeviceContext);
-    let coverHeight = undefined;
+    let height = undefined;
 
     switch (device) {
         case 'big':
-            coverHeight = '500px';
+            height = '500px';
             break;
         case 'medium':
-            coverHeight = '400px';
+            height = '400px';
             break;
         case 'small':
-            coverHeight = '300px';
+            height = '300px';
             break;
     }
 
     const style = {
-        height: coverHeight
+        height
     }
 
     return (

@@ -8,7 +8,7 @@ function Layer({ children }) {
 
     switch (device) {
         case 'big':
-            borderRadius = '50px';
+            borderRadius = '40px';
             break;
         case 'medium':
             borderRadius = '40px';
