@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import DeviceContext from "../../context/DeviceContext";
 import { useAPI } from "../../hooks/useAPI";
-import Box from "./box/Box";
+import Box from "./card/Box";
 
 function ArtList() {
 
