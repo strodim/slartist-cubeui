@@ -63,7 +63,7 @@ body {
  
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 500px 1fr 150px;
+  grid-template-rows: auto auto 1fr auto;
   grid-gap: var(--gap);
   justify-items: center;
 
@@ -100,7 +100,6 @@ body {
   border-radius: 30px;
   width: 95%;
 
-  height: 500px;
   background-image: url('../public/bg-cover.jpg');
   background-size: cover;
   background-position: center center;
@@ -221,7 +220,6 @@ body {
   border-radius: 30px;
   width: 95%;
 
-  height: 150px;
   background-image: url('../public/bg-footer.jpeg');
   background-size: cover;
   background-position: center center;
