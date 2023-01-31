@@ -1,9 +1,12 @@
+import { useContext } from "react";
+import DeviceContext from "../../context/DeviceContext";
 import { useAPI } from "../../hooks/useAPI";
 import ArtCard from "./card/Card";
 
 function ArtList() {
 
     const { data, loading, error } = useAPI('http://localhost:1337/api/pictures?populate=deep');
+    const { device } = useContext(DeviceContext);
 
     if (loading) {
         return <div></div>;
@@ -23,10 +26,30 @@ function ArtList() {
         const gradient = { background: itm.attributes.Gradient || 'black' };
         const frameColor = itm.attributes.FrameColor;
         const background = itm.attributes.Background;
-        const imgUrl = baseUrl + itm.attributes.Img.data.attributes.formats.small.url;
-        const imgWidth = itm.attributes.Img.data.attributes.formats.medium.width;
-        const imgHeight = itm.attributes.Img.data.attributes.formats.medium.height;
-        const opacity = '0.2';
+        let image = undefined;
+        let imgWidth = undefined;
+        let imgHeight = undefined;
+
+        switch (device) {
+            case 'big':
+                image = itm.attributes.Img.data.attributes.formats.medium;
+                imgWidth = image.width;
+                imgHeight = image.height;
+                break;
+            case 'medium':
+                image = itm.attributes.Img.data.attributes.formats.small;
+                imgWidth = image.width;
+                imgHeight = image.height;
+                break;
+            case 'small':
+                image = itm.attributes.Img.data.attributes.formats.small;
+                imgWidth = image.width / 1.5;
+                imgHeight = image.height / 1.5;
+                break;
+        }
+
+        const imgUrl = baseUrl + image.url;
+
 
         items.push({
             id,
@@ -39,8 +62,7 @@ function ArtList() {
             background,
             imgUrl,
             imgWidth,
-            imgHeight,
-            opacity
+            imgHeight
         });
     })
 

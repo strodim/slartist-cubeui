@@ -5,18 +5,34 @@ import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Background from './layout/Background';
 import Layer from './layout/Layer';
-
+import { useWindowDimensions } from './hooks/useWindowDimensions';
+import DeviceContext from './context/DeviceContext';
 
 function App() {
+
+  const screenWidth = useWindowDimensions().width;
+
+  let device = 'big';
+
+  if (screenWidth < 1650) {
+    device = 'medium';
+  }
+
+  if (screenWidth < 760) {
+    device = 'small';
+  }
+
   return (
-    <Background>
-      <Layer>
-        <Header />
-        <Cover />
-        <ArtList />
-        <Footer />
-      </Layer>
-    </Background>
+    <DeviceContext.Provider value={{ device }}>
+      <Background>
+        <Layer>
+          <Header />
+          <Cover />
+          <ArtList />
+          <Footer />
+        </Layer>
+      </Background>
+    </DeviceContext.Provider >
   );
 }
 
