@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import DeviceContext from "../../context/DeviceContext";
 import { useAPI } from "../../hooks/useAPI";
-import ArtCard from "./card/Card";
+import Box from "./box/Box";
 
 function ArtList() {
 
@@ -70,7 +70,7 @@ function ArtList() {
         <div className="art-list">
 
             {items.map(item => (
-                <ArtCard key={item.id} item={item} />
+                <Box key={item.id} item={item} />
             ))
             }
         </div>

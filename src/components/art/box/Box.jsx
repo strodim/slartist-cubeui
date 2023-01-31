@@ -3,7 +3,7 @@ import Main from "./Main";
 import Footer from "./Footer";
 
 
-function Card({ item }) {
+function Box({ item }) {
 
     return (
         <div className="art-card" style={item.gradient}>
@@ -14,4 +14,4 @@ function Card({ item }) {
     );
 }
 
-export default Card;
+export default Box;
