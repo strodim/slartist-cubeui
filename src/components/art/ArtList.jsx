@@ -23,7 +23,7 @@ function ArtList() {
         const desc = itm.attributes.Description;
         const sale = itm.attributes.Sale;
         const price = sale === 'for-sale' ? itm.attributes.Price : undefined;
-        const gradient = { background: itm.attributes.Gradient || 'black' };
+        const gradient = itm.attributes.Gradient;
         const frameColor = itm.attributes.FrameColor;
         const background = itm.attributes.Background;
         let image = undefined;
@@ -43,8 +43,8 @@ function ArtList() {
                 break;
             case 'small':
                 image = itm.attributes.Img.data.attributes.formats.small;
-                imgWidth = image.width / 1.7;
-                imgHeight = image.height / 1.7;
+                imgWidth = image.width / 1.8;
+                imgHeight = image.height / 1.8;
                 break;
         }
 

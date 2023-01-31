@@ -5,11 +5,15 @@ import Footer from "./Footer";
 
 function Box({ item }) {
 
+    const style = {
+        background: item.background
+    }
+
     return (
-        <div className="art-card" style={item.gradient}>
-            <Header title={item.title} price={item.price} frameColor={item.frameColor} background={item.background} titleWidth={item.imgWidth} />
+        <div className="art-box" style={style}>
+            <Header title={item.title} />
             <Main item={item} />
-            <Footer desc={item.desc} frameColor={item.frameColor} background={item.background} />
+            <Footer desc={item.desc} price={item.price} frameColor={item.frameColor} />
         </div>
     );
 }

@@ -1,18 +1,40 @@
-function Footer({ desc, frameColor, background }) {
+import { useContext } from "react";
+import DeviceContext from "../../../context/DeviceContext";
 
-    const style = {
-        backgroundColor: background,
-        border: `3px solid ${frameColor}`
+function Footer({ desc, price, frameColor }) {
+
+    const { device } = useContext(DeviceContext);
+    let priceFontSize = undefined;
+    let minHeight = undefined;
+
+    switch (device) {
+        case 'big':
+            priceFontSize = 35;
+            minHeight = 60;
+            break;
+        case 'medium':
+            priceFontSize = 22;
+            minHeight = 50;
+            break;
+        case 'small':
+            priceFontSize = 15;
+            minHeight = 30;
     }
 
+    const priceStyle = {
+        fontSize: `${priceFontSize}px`
+    }
+
+
+
     return (
-        <div className="art-card-footer">
-            <div className="art-card-size">
-                <h3>
-                    {desc}
-                </h3>
+        <div className="art-box-footer" style={{ minHeight: minHeight }}>
+         
+            {price && <div className="art-box-footer-price" style={priceStyle}>
+                {price}$
             </div>
-        </div>
+            }
+        </div >
     );
 }
 

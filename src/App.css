@@ -103,7 +103,7 @@ body {
   background-image: url('../public/bg-cover.jpg');
   background-size: cover;
   background-position: right 30% bottom 55%;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 
@@ -118,7 +118,7 @@ body {
 
 }
 
-.art-card {
+.art-box{
 
   box-shadow: var(--box-shadow);
   width: 95%;
@@ -138,79 +138,70 @@ body {
 }
 
 
-.art-card-header {
+.art-box-header {
   grid-area: header;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.art-card-price {
-  color: white;
-  font-size: 20px;
-  font-family: 'Audiowide', cursive;
-  font-weight: bold;
-  align-self: center;
-
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 20px;
-
-  width:100px;
-  text-align: center;
-
-  box-shadow: var(--box-shadow);
-}
-
-.art-card-main {
-  grid-area: main;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.art-card-title {
+.art-box-header-title {
   margin-top: 10px;
   color: white;
   font-family: 'Audiowide', cursive;
   font-weight: bold;
   align-self: center;
-
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 20px;
-
-  min-width:200px;
-  text-align: center;
-
-  box-shadow: var(--box-shadow);
-
 }
 
-.art-card-pic {
-  display: block; 
-  border: 10px ridge;
-  padding:0;
-}
-
-.art-card-footer {
-  grid-area: footer;
+.art-box-main {
+  grid-area: main;
   display: flex;
   justify-content: center;
   align-items: center;
+
+
 }
 
-.art-card-size {
+
+.art-box-main-pic {
+  display: block; 
+  padding:0;
+}
+
+.art-box-footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "size price order";
+}
+
+.art-box-footer-size {
+  grid-area: size;
   color: white;
-  font-size: 20px;
   font-family: 'Audiowide', cursive;
   font-weight: bold;
+
+
+  display: flex;
+  justify-content: center;
+  align-items:center;
 }
 
+.art-box-footer-price {
+  grid-area: price;
+  color: white;
+  font-family: 'Orbitron';
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.art-box-footer-order {
+  grid-area: order;
+}
 
 
 /* FOOTER  ###########################################################################################################*/
@@ -223,5 +214,5 @@ body {
   background-image: url('../public/bg-footer.jpeg');
   background-size: cover;
   background-position: center center;
-  opacity: 0.7;
+  opacity: 0.8;
 }

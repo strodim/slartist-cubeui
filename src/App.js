@@ -18,7 +18,7 @@ function App() {
     device = 'medium';
   }
 
-  if (screenWidth < 600) {
+  if (screenWidth < 768) {
     device = 'small';
   }
 
