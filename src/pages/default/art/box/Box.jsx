@@ -28,9 +28,9 @@ function Box({ item }) {
 
     return (
         <div className="art-box" style={style}>
-
+            <Header title={item.title} />
             <Main item={item} />
-
+            <Footer desc={item.size} price={item.price} frameColor={item.color} />
         </div>
     );
 }

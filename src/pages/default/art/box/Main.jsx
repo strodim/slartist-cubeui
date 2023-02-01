@@ -33,7 +33,7 @@ function Main({ item }) {
     };
 
     const boxStyle = {
-
+        background: item.background,
         paddingTop: `${padding}px`,
         paddingBottom: `${padding}px`,
     }
