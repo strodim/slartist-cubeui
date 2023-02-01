@@ -8,11 +8,6 @@
   --color-main:rgba(219,203,212, 0.8);
 }
 
-@font-face {
-  font-family: "hand-font";
-  src: url("../public/hand-font.otf") format("opentype");
-}
-
 body {
 
   box-sizing: border-box;
