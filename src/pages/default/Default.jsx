@@ -30,7 +30,6 @@ function Default() {
 
     return (
         <div className="page">
-            <Cover coverText={_data.covertext} coverPic={_data.coverpic.url} />
             <Art />
         </div>
     )

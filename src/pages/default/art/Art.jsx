@@ -1,6 +1,7 @@
 import Box from "./box/Box";
 import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
+import Footer from "./box/Footer";
 
 const ALL_ARTS_QUERY = gql`
   query AllArtsQuery {

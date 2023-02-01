@@ -39,7 +39,6 @@ function App() {
     <BrowserRouter>
       <ApolloProvider client={client}>
         <DeviceContext.Provider value={{ device }}>
-          <Header />
           <Routes>
             <Route path="/" element={<Default />} />
             <Route path="/about" element={<About />} />
