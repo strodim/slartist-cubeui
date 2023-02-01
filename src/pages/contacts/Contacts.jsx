@@ -1,7 +1,7 @@
 function Contacts() {
 
     return (
-        <div className="contacts-page">
+        <div className="page">
             Contacts
         </div>
     )

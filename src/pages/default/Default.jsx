@@ -1,13 +1,14 @@
-import ArtList from '../../components/art/ArtList';
-import Cover from '../../components/cover/Cover';
-import Footer from '../../components/footer/Footer';
+import Art from "./art/Art";
+import Cover from "./cover/Cover";
+import Footer from "./footer/Footer";
+
 
 function Default() {
 
     return (
-        <div className="default-page">
+        <div className="page">
             <Cover />
-            <ArtList />
+            <Art />
             <Footer />
         </div>
     )

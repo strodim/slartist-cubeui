@@ -1,7 +1,7 @@
 function Exhibitions() {
 
     return (
-        <div className="exh-page">
+        <div className="page">
             Exhibitions
         </div>
     )

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import DeviceContext from "../../../context/DeviceContext";
+import DeviceContext from "../../../../context/DeviceContext";
 
 function Footer({ size, price }) {
 

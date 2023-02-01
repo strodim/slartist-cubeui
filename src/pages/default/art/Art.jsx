@@ -1,6 +1,3 @@
-import { useContext } from "react";
-import DeviceContext from "../../context/DeviceContext";
-import { useAPI } from "../../hooks/useAPI";
 import Box from "./box/Box";
 import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
@@ -22,10 +19,9 @@ const ALL_ARTS_QUERY = gql`
   }
 `;
 
-function ArtList() {
+function Art() {
 
     const { data, loading, error } = useQuery(ALL_ARTS_QUERY);
-    const { device } = useContext(DeviceContext);
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error!</p>;
@@ -40,4 +36,4 @@ function ArtList() {
     );
 }
 
-export default ArtList;
+export default Art;

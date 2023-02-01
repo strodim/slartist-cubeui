@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Header from './components/header/Header';
-import Background from './layout/Background';
 import Layer from './layout/Layer';
 import { useWindowDimensions } from './hooks/useWindowDimensions';
 import DeviceContext from './context/DeviceContext';
@@ -40,17 +39,15 @@ function App() {
     <BrowserRouter>
       <ApolloProvider client={client}>
         <DeviceContext.Provider value={{ device }}>
-          <Background>
-            <Layer>
-              <Header />
-              <Routes>
-                <Route path="/" element={<Default />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/exhibitions" element={<Exhibitions />} />
-                <Route path="/contacts" element={<Contacts />} />
-              </Routes>
-            </Layer>
-          </Background>
+          <Layer>
+            <Header />
+            <Routes>
+              <Route path="/" element={<Default />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/exhibitions" element={<Exhibitions />} />
+              <Route path="/contacts" element={<Contacts />} />
+            </Routes>
+          </Layer>
         </DeviceContext.Provider >
       </ApolloProvider>
     </BrowserRouter >
