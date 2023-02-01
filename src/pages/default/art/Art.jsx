@@ -5,16 +5,16 @@ import gql from 'graphql-tag';
 const ALL_ARTS_QUERY = gql`
   query AllArtsQuery {
     allArts(first: 50) {
-      id
-      title
-      price
-      size
-      color
-      background
-      gradient
-      pic {
-        url
-      }
+        id
+        title
+        price
+        size
+        color
+        background
+        gradient
+        pic {
+          url
+        }
     }
   }`;
 

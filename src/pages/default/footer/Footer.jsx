@@ -4,28 +4,33 @@ import { useContext } from "react";
 function Footer({ footerText, footerPic }) {
 
     const { device } = useContext(DeviceContext);
-    let height = undefined;
+    let boxHeight = 150;
+    let textFontSize = 25;
+
 
     switch (device) {
-        case 'big':
-            height = '150px';
-            break;
         case 'medium':
-            height = '120px';
+            boxHeight *= 0.8;
+            textFontSize *= 0.8;
             break;
         case 'small':
-            height = '100px';
+            boxHeight *= 0.5;
+            textFontSize *= 0.5;
             break;
     }
 
-    const style = {
-        height,
+    const boxStyle = {
+        height: `${boxHeight}px`,
         backgroundImage: `url(${footerPic})`
     }
 
+    const textStyle = {
+        fontSize: `${textFontSize}px`,
+    }
+
     return (
-        <div className="footer" style={style}>
-            <div className="footer-text">
+        <div className="footer" style={boxStyle}>
+            <div className="footer-text" style={textStyle}>
                 {footerText}
             </div>
         </div>
