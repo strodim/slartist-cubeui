@@ -6,7 +6,7 @@ import Footer from "./Footer";
 function Box({ item }) {
 
     const style = {
-        background: item.background
+        background: item.gradient
     }
 
     return (

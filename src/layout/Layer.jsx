@@ -23,7 +23,7 @@ function Layer({ children }) {
     }
 
 
-    return <div className="layer" style={style}>{children}</div>
+    return <div className="layer">{children}</div>
 }
 
 export default Layer;
