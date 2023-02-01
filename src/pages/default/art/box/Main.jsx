@@ -39,7 +39,7 @@ function Main({ item }) {
     }
 
     return (
-        <img style={picStyle} className='art-box-main-pic' src={picUrl} title={item.title} alt={item.title} />
+        <img className='art-box-main-pic' src={picUrl} title={item.title} alt={item.title} />
     );
 }
 
