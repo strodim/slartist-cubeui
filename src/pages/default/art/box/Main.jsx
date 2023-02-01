@@ -22,7 +22,7 @@ function Main({ item }) {
         case 'small':
             borderSize = 6;
             padding = 10;
-            picUrl += '?w=230';
+            picUrl += '?w=330';
             break;
     }
 
