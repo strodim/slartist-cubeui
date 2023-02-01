@@ -32,7 +32,6 @@ function Default() {
         <div className="page">
             <Cover coverText={_data.covertext} coverPic={_data.coverpic.url} />
             <Art />
-            <Footer footerText={_data.footertext} footerPic={_data.footerpic.url} />
         </div>
     )
 }
