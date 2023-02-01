@@ -39,9 +39,7 @@ function Main({ item }) {
     }
 
     return (
-        <div className="art-box-main" style={boxStyle}>
-            <img style={picStyle} className='art-box-main-pic' src={picUrl} title={item.title} alt={item.title} />
-        </div>
+        <img style={picStyle} className='art-box-main-pic' src={picUrl} title={item.title} alt={item.title} />
     );
 }
 

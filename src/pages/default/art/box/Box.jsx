@@ -27,10 +27,10 @@ function Box({ item }) {
     }
 
     return (
-        <div className="art-box" style={style}>
-            <Header title={item.title} />
+        <div className="art-box">
+
             <Main item={item} />
-            <Footer desc={item.size} price={item.price} frameColor={item.color} />
+
         </div>
     );
 }
