@@ -13,7 +13,7 @@ function Box({ item }) {
         <div className="art-box" style={style}>
             <Header title={item.title} />
             <Main item={item} />
-            <Footer desc={item.desc} price={item.price} frameColor={item.frameColor} />
+            <Footer desc={item.size} price={item.price} frameColor={item.color} />
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import DeviceContext from "../../../context/DeviceContext";
 
-function Header({ title, price, frameColor, background, titleWidth }) {
+function Header({ title }) {
 
     const { device } = useContext(DeviceContext);
     let fontSize = undefined;
@@ -18,17 +18,19 @@ function Header({ title, price, frameColor, background, titleWidth }) {
             break;
     }
 
-    const style = {
-        backgroundColor: background,
+    const titleStyle = {
+
         fontSize: `${fontSize}px`
     }
 
     return (
-        <div className="art-box-header">
-            <div className="art-box-header-title" style={style}>
+
+        <div className="art-box-header" >
+            <div className="art-box-header-title" style={titleStyle}>
                 {title}
             </div>
         </div >
+
     );
 }
 
