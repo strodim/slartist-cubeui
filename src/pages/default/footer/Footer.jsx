@@ -1,7 +1,7 @@
 import DeviceContext from "../../../context/DeviceContext";
 import { useContext } from "react";
 
-function Footer() {
+function Footer({ footerText, footerPic }) {
 
     const { device } = useContext(DeviceContext);
     let height = undefined;
@@ -19,12 +19,15 @@ function Footer() {
     }
 
     const style = {
-        height
+        height,
+        backgroundImage: `url(${footerPic})`
     }
 
     return (
         <div className="footer" style={style}>
-
+            <div className="footer-text">
+                {footerText}
+            </div>
         </div>
     );
 }

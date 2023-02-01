@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 :root {
   --box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
@@ -87,11 +88,20 @@ body {
   box-shadow: var(--box-shadow);
   border-radius: 20px;
   width: 95%;
-
-  background-image: url('../public/bg-cover.jpg');
   background-size: cover;
   background-position: right 30% bottom 55%;
   opacity: 0.8;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover-text {
+  color: white;
+  font-size: 35px;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 3px;
 }
 
 
@@ -200,11 +210,22 @@ body {
   border-radius: 20px;
   width: 95%;
 
-  background-image: url('../public/bg-footer.jpeg');
   background-size: cover;
   background-position: center center;
   opacity: 0.8;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.footer-text {
+  color: white;
+  font-size: 20px;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 3px;
+}
+
 
 
 .page {

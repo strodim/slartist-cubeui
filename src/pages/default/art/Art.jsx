@@ -16,24 +16,23 @@ const ALL_ARTS_QUERY = gql`
         url
       }
     }
-  }
-`;
+  }`;
 
 function Art() {
 
-    const { data, loading, error } = useQuery(ALL_ARTS_QUERY);
+  const { data, loading, error } = useQuery(ALL_ARTS_QUERY);
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error!</p>;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error!</p>;
 
-    return (
-        <div className="art-list">
-            {data.allArts.map(art => (
-                <Box key={art.id} item={art} />
-            ))}
-        </div>
+  return (
+    <div className="art-list">
+      {data.allArts.map(art => (
+        <Box key={art.id} item={art} />
+      ))}
+    </div>
 
-    );
+  );
 }
 
 export default Art;
