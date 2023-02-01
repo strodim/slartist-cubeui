@@ -1,13 +1,15 @@
 import './App.css';
-import ArtList from './components/art/ArtList';
-import Cover from './components/cover/Cover';
-import Footer from './components/footer/Footer';
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Header from './components/header/Header';
 import Background from './layout/Background';
 import Layer from './layout/Layer';
 import { useWindowDimensions } from './hooks/useWindowDimensions';
 import DeviceContext from './context/DeviceContext';
 import { ApolloClient, HttpLink, InMemoryCache, ApolloProvider } from '@apollo/client';
+import Default from './pages/default/Default';
+import About from './pages/about/About';
+import Exhibitions from './pages/exhibitions/Exhibitions';
+import Contacts from './pages/contacts/Contacts';
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -35,18 +37,23 @@ function App() {
   }
 
   return (
-    <ApolloProvider client={client}>
-      <DeviceContext.Provider value={{ device }}>
-        <Background>
-          <Layer>
-            <Header />
-            <Cover />
-            <ArtList />
-            <Footer />
-          </Layer>
-        </Background>
-      </DeviceContext.Provider >
-    </ApolloProvider>
+    <BrowserRouter>
+      <ApolloProvider client={client}>
+        <DeviceContext.Provider value={{ device }}>
+          <Background>
+            <Layer>
+              <Header />
+              <Routes>
+                <Route path="/" element={<Default />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/exhibitions" element={<Exhibitions />} />
+                <Route path="/contacts" element={<Contacts />} />
+              </Routes>
+            </Layer>
+          </Background>
+        </DeviceContext.Provider >
+      </ApolloProvider>
+    </BrowserRouter >
   );
 }
 

@@ -213,3 +213,20 @@ body {
   background-position: center center;
   opacity: 0.8;
 }
+
+
+.default-page {
+  width: 100%;
+}
+
+.about-page {
+  width: 100%;
+}
+
+.contacts-page {
+  width: 100%;
+}
+
+.exh-page {
+  width: 100%;
+}
