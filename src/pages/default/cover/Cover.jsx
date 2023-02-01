@@ -4,35 +4,36 @@ import DeviceContext from "../../../context/DeviceContext";
 function Cover({ coverText, coverPic }) {
 
     const { device } = useContext(DeviceContext);
-    let height = undefined;
-    let backgroundPosition = undefined;
+    let boxHeight = 500;
+    let textFontSize = 35;
+    let backgroundPosition = 'right 20% bottom 65%';
 
     switch (device) {
-        case 'big':
-            height = '500px';
-            backgroundPosition = 'right 20% bottom 65%'
-            break;
         case 'medium':
-            height = '400px';
-            backgroundPosition = 'right 30% bottom 55%'
+            boxHeight *= 0.8;
+            textFontSize *= 0.8;
             break;
         case 'small':
-            height = '300px';
-            backgroundPosition = 'right 30% bottom 45%'
+            boxHeight *= 0.5;
+            textFontSize *= 0.4;
             break;
     }
 
     console.log(coverPic);
 
-    const style = {
-        height,
+    const boxStyle = {
+        height: `${boxHeight}px`,
         backgroundPosition,
         backgroundImage: `url(${coverPic})`
     }
 
+    const textStyle = {
+        fontSize: `${textFontSize}px`,
+    }
+
     return (
-        <div className="cover" style={style}>
-            <div className="cover-text">
+        <div className="cover" style={boxStyle}>
+            <div className="cover-text" style={textStyle}>
                 {coverText}
             </div>
         </div>
