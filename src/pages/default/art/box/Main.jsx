@@ -12,17 +12,17 @@ function Main({ item }) {
         case 'big':
             borderSize = 10;
             padding = 20;
-            picUrl += '?h=600';
+            picUrl += '?w=600';
             break;
         case 'medium':
             borderSize = 8;
             padding = 15;
-            picUrl += '?h=400';
+            picUrl += '?w=400';
             break;
         case 'small':
             borderSize = 6;
             padding = 10;
-            picUrl += '?h=230';
+            picUrl += '?w=230';
             break;
     }
 

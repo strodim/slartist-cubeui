@@ -39,15 +39,13 @@ function App() {
     <BrowserRouter>
       <ApolloProvider client={client}>
         <DeviceContext.Provider value={{ device }}>
-          <Layer>
-            <Header />
-            <Routes>
-              <Route path="/" element={<Default />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/exhibitions" element={<Exhibitions />} />
-              <Route path="/contacts" element={<Contacts />} />
-            </Routes>
-          </Layer>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Default />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/exhibitions" element={<Exhibitions />} />
+            <Route path="/contacts" element={<Contacts />} />
+          </Routes>
         </DeviceContext.Provider >
       </ApolloProvider>
     </BrowserRouter >
