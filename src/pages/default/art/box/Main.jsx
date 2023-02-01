@@ -36,7 +36,6 @@ function Main({ item }) {
 
         paddingTop: `${padding}px`,
         paddingBottom: `${padding}px`,
-        background: item.gradient
     }
 
     return (
